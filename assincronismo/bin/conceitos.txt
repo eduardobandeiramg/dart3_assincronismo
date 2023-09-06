@@ -1,10 +1,13 @@
-Dart é uma linguagem síncrona, ou seja, cada tarefa é executadae por vez pelo programa.
+Dart é uma linguagem singleThread, ou seja, as tarefas são executadas em apenas uma thread de execução por vez (CPU).
+Entretanto, suporta progração concorrente com o uso dos isolates (unidades de execução).
+
+Dart é uma linguagem síncrona, ou seja, cada tarefa é executadae por vez pelo programa, na ordem em que aparecem.
 Caso alguma tarefa demore para executar, todo o resto do programa vai esperar pela sua conclusão para continuar. 
 Em alguns casos isso pode gerar travamento e seria interessante se o programa pudesse continuar seu fluxo enquanto certa tarefa
 mais demorada seja concluída.
 Assincronismo é quando tarefas são executadas simultaneamente, em segundo plano.
-
-Isolates: espaços de memória usados par executar certa tarefa. 
-Dart permite o recrutamento de isolates, mas isso não será abordado no momento. 
+ATENÇÃO: trata-se de realizar uma tarefa enquanto ESPERA-SE que outra seja executada. É diferente de realizar duas ao mesmo tempo. 
+Exemplo: apertei o botão da máquina de lavar. Agora a máquina é a responsável por lavar a roupa e posso fazer outras coisas enquanto isso. 
+Não estou realizando duas ações ao mesmo tempo. Estou esperando para que a ação que comecei termine
 
 Loop Events:
