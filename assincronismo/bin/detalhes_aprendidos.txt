@@ -1,0 +1,12 @@
+1- Não é necessário criar variáveis ao criar objetos. Objetos podem ser criados e automaticamente tratados da forma como devem
+ser, como por exemplo serem instantaneamente enviados para um banco ou para uma coleção (lista, map, conjunto, etc).
+
+2- É possível acessar os métodos de determinado tipo diretamente de uma função, caso esta função retorne o respectivo tipo. 
+Exemplo:
+
+String retornaString(){
+    return "Isso é uma String!"
+}
+retornaString().toUpperCase();
+
+3- 
