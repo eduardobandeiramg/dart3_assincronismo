@@ -1,0 +1,10 @@
+Dart é uma linguagem síncrona, ou seja, cada tarefa é executadae por vez pelo programa.
+Caso alguma tarefa demore para executar, todo o resto do programa vai esperar pela sua conclusão para continuar. 
+Em alguns casos isso pode gerar travamento e seria interessante se o programa pudesse continuar seu fluxo enquanto certa tarefa
+mais demorada seja concluída.
+Assincronismo é quando tarefas são executadas simultaneamente, em segundo plano.
+
+Isolates: espaços de memória usados par executar certa tarefa. 
+Dart permite o recrutamento de isolates, mas isso não será abordado no momento. 
+
+Loop Events:
