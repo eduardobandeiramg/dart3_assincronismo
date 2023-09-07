@@ -22,7 +22,7 @@ class TipoFuturo{
                                     //se completar. Ele se completará quando a condição do "await" se concretizar.
 
   // Método futuro:
-  Future metodoFuturo() async { //assinc é necessário para que o método seja de fato assíncrono (permita pedir pro código fluir enquanto faz algo)
+  static Future metodoFuturo() async { //assinc é necessário para que o método seja de fato assíncrono (permita pedir pro código fluir enquanto faz algo)
     print("Esperando 6 segundos...");
     await Future.delayed(Duration(seconds: 5)); //await é necessário para que o método só termine sua execução após certa condição ser cumprida
     print("Método futuro executado");

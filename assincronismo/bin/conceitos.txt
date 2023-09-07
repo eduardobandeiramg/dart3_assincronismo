@@ -18,10 +18,15 @@ podem ser usadas duas ferrramentas:
 
 No Future, a tarefa é concluída quando se atinge o que espera (ex.: receber algo do banco de dados).
 No Steam, a tarefa é concluída quando se atinge o intervalo pré-determinado. A tarefa pode receber dados continuamente. 
+Resumidamente, o Future serve para receber apenas uma coisa e o Stream serve para receber várias coisas.
 
 Para se usar Future, usa-se objetos do tipo Future ou métodos que retornam o tipo Future. 
-Para se usar Streams, usam-se funções que retornam o tipo Stream e ouvintes que são ativados como métodos não estáticos 
-desse tipo.
+Para se usar Streams, usam-se objetos Stream ou funções que retornam o tipo Stream. E ouvintes que são ativados como métodos não 
+estáticos do tipo Stream.
+
+
+Observação Importante: Ao se chamar os métodos de Futures, Streams e Ouvintes é importante criar instâncias para criar 
+aquele objeto específico. Caso contrário, se perderá controle sobre a Stream ou Future iniciado ou iniciada. 
 
 Ok. Future, com o await, é utilizado para que o código continue rodando enquanto uma outra função aguarda receber algo. 
 Quando essa função recebe o que está esperando, é encerrada. 
