@@ -1,17 +1,17 @@
+import 'dart:html';
+
 /// Streams:
 /// TIPO ASSÍNCRONO (permite que o app continue), que não termina quando recebe algo de fora. 
 /// Ou seja, diferente do Future, consegue "retornar" várias coisas até que o intervalo pré determinado termine.
+/// Seu fim é determinado por um intervalo específico e não quando "retorna" algo.
 /// 
 /// Precisa de um subscriber, que "ouvirá" o que está recebendo.
 /// Esse subscriber é um objeto da classe "StreamSubscription".
-/// Ele receberá a função stream chamando o método "listan".
+/// Ele receberá o stream chamando o método "listen" da função/objeto Stream.
 /// Exemplo:
 ///
-
-
 Stream mandaAlgo() async*{
   int intervalo = 0;
-
   while(intervalo < 5){
     yield intervalo++;
   }
@@ -19,7 +19,6 @@ Stream mandaAlgo() async*{
 
 Stream outraStream() async* {
   int intervalo2 = 0;
-
   while(intervalo2 < 15){
     yield (intervalo2 + 3);
   }
@@ -32,8 +31,6 @@ void ouveAPrimeira(){
 void ouveASegunda(){
   outraStream().listen((event) {print("ouvinte da segunda stream"); });
 }
-
-
 
 
 class TipoStream{
@@ -50,14 +47,10 @@ static Stream exemploStream()async*{
 void ouvinte(Stream ){
   exemploStream().listen((event) { });
 }
-
 // Métodos da função que retorna um objeto do tipo Stream:
 // listen() -> recebe os valores da stream
 // onError() -> trata um erro na stream
 // onDone() -> realiza algo depois que a stream termina
 // ...
 // funcao.
-
-
-
 }

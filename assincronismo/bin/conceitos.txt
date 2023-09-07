@@ -2,15 +2,26 @@ Dart é uma linguagem singleThread, ou seja, as tarefas são executadas em apena
 Entretanto, suporta progração concorrente com o uso dos isolates (unidades de execução).
 
 Dart é uma linguagem síncrona, ou seja, cada tarefa é executadae por vez pelo programa, na ordem em que aparecem.
-Caso alguma tarefa demore para executar, todo o resto do programa vai esperar pela sua conclusão para continuar. 
+Caso alguma tarefa demore para executar (ou para receber algo), todo o resto do programa vai esperar pela sua conclusão para continuar. 
 Em alguns casos isso pode gerar travamento e seria interessante se o programa pudesse continuar seu fluxo enquanto certa tarefa
 mais demorada seja concluída.
-Assincronismo é quando tarefas são executadas simultaneamente, em segundo plano.
+Assincronismo é quando tarefas são executadas "simultaneamente", em segundo plano.
 ATENÇÃO: trata-se de realizar uma tarefa enquanto ESPERA-SE que outra seja executada. É diferente de realizar duas ao mesmo tempo. 
-Exemplo: apertei o botão da máquina de lavar. Agora a máquina é a responsável por lavar a roupa e posso fazer outras coisas enquanto isso. 
-Não estou realizando duas ações ao mesmo tempo. Estou esperando para que a ação que comecei termine
+Exemplo: apertei o botão da máquina de lavar. Agora a máquina é a responsável por lavar a roupa e posso fazer outras coisas enquanto 
+isso. 
+Não estou realizando duas ações ao mesmo tempo. Estou esperando para que a ação que comecei termine.
 
+Para adicionar assincronismo ao código, ou seja, permitir que alguma tarefa espere por algo enquanto o resto do código continua, 
+podem ser usadas duas ferrramentas:
+- Future
+- Streams
 
+No Future, a tarefa é concluída quando se atinge o que espera (ex.: receber algo do banco de dados).
+No Steam, a tarefa é concluída quando se atinge o intervalo pré-determinado. A tarefa pode receber dados continuamente. 
+
+Para se usar Future, usa-se objetos do tipo Future ou métodos que retornam o tipo Future. 
+Para se usar Streams, usam-se funções que retornam o tipo Stream e ouvintes que são ativados como métodos não estáticos 
+desse tipo.
 
 Ok. Future, com o await, é utilizado para que o código continue rodando enquanto uma outra função aguarda receber algo. 
 Quando essa função recebe o que está esperando, é encerrada. 

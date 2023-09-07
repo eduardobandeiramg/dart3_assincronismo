@@ -6,9 +6,11 @@
 /// Seria uma questão de modularidade.´
 /// 
 
-
 //Objeto Future:
-
+Future exemplo = Future(() async => null);
+Future exemplo2 = Future(() async {
+  
+});
 
 class TipoFuturo{
   // Atributo futuro:
