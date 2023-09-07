@@ -9,4 +9,8 @@ String retornaString(){
 }
 retornaString().toUpperCase();
 
-3- 
+3- Pode-se inserir um return dentro de um catch para algum valor ser retornado mesmo que um erro ocorra. 
+
+4- Blocos try catch podem estar tanto dentro de funções quanto cobrindo chamadas
+
+5- Throw funciona como return e sai da função. Tudo embaixo será código morto.

@@ -10,4 +10,11 @@ ATENÇÃO: trata-se de realizar uma tarefa enquanto ESPERA-SE que outra seja exe
 Exemplo: apertei o botão da máquina de lavar. Agora a máquina é a responsável por lavar a roupa e posso fazer outras coisas enquanto isso. 
 Não estou realizando duas ações ao mesmo tempo. Estou esperando para que a ação que comecei termine
 
-Loop Events:
+
+
+Ok. Future, com o await, é utilizado para que o código continue rodando enquanto uma outra função aguarda receber algo. 
+Quando essa função recebe o que está esperando, é encerrada. 
+Mas e caso eu receba informações continuamente e, mesmo após cada recebimento eu não queira encerrar a função?
+Por exemplo, no whatsapp, quando alguma mensagem é recebida, a função assíncrona que recebe mensagens não é encerrada.
+Ela continua rodando, recebendo mais mensagens e tratando essas mensagens enquanto isso.
+É aí que entram os Streams!!!
