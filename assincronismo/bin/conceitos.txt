@@ -28,8 +28,12 @@ estáticos do tipo Stream.
 Observação Importante: Ao se chamar os métodos de Futures, Streams e Ouvintes é importante criar instâncias para criar 
 aquele objeto específico. Caso contrário, se perderá controle sobre a Stream ou Future iniciado ou iniciada. 
 
-Ok. Future, com o await, é utilizado para que o código continue rodando enquanto uma outra função aguarda receber algo. 
-Quando essa função recebe o que está esperando, é encerrada. 
+Ok. Future é utilizado para que o código continue rodando enquanto uma outra função aguarda receber algo.
+Quando essa função recebe o que está esperando, é encerrada.
+
+Pode-se utilizar a clausula await, que pede para que a execução do codigo espere a resposta de um
+comando para que o restante seja executado.
+
 Mas e caso eu receba informações continuamente e, mesmo após cada recebimento eu não queira encerrar a função?
 Por exemplo, no whatsapp, quando alguma mensagem é recebida, a função assíncrona que recebe mensagens não é encerrada.
 Ela continua rodando, recebendo mais mensagens e tratando essas mensagens enquanto isso.
