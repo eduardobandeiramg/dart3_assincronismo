@@ -1,3 +1,19 @@
+Operações síncronas são aquelas que acontecem ao mesmo tempo.
+Exemplo: o código se depara com uma cláusula Future, que vai levar algum tempo para completar, mas o
+ resto do código continua sendo executado juntamente com o Future.
+
+Operações assíncronas são aquelas que interrompem a execução do código.
+Exemplo: o código se depara com uma cláusula Future antecedida por um comando await.
+Neste caso, a execução desse trecho de código será interrompida até que se atinja o resultado.
+
+Normalmente, as duas são combinadas:
+- operações síncronas para o código da aplicação como um to.do, que não pode esperar nem depender de
+ coisas que levam tempo
+- operações assíncronas para funções e métodos específicos; métodos estes que precisam esperar por
+algo para poder continuar a execução e retornar o resultado correto
+
+
+
 Dart é uma linguagem singleThread, ou seja, as tarefas são executadas em apenas uma thread de execução por vez (CPU).
 Entretanto, suporta progração concorrente com o uso dos isolates (unidades de execução).
 
